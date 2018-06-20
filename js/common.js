@@ -18,8 +18,10 @@ $(function(){
 
 //全局配置
 var APP = {
-    baseUrl: 'http://fullstack.net.cn:3000',
+    baseUrl: 'http://fullstack.net.cn:3000'
 }
+
+$.ajaxSetup({crossDomain: true, xhrFields: {withCredentials: true}});
 
 
 //截取修改地址的id

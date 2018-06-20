@@ -8,17 +8,19 @@ $(function() {
         var result = $('#loginForm').serializeToJson();
 
         //console.log(result);
-
+        //验证用户名
         if (!$.trim(result.username)){
             alert('请输入用户名');
             return;
         }
 
+        //验证密码
         if (!$.trim(result.password)){
             alert('请输入密码');
             return;
         }
 
+        //发送ajax请求
         $.ajax({
             type: 'post',
             url: `${APP.baseUrl}/employee/employeeLogin`,
